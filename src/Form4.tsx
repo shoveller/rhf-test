@@ -1,55 +1,23 @@
-import {FieldValues, FormProvider, useForm, SubmitHandler, SubmitErrorHandler, FieldPath , useFormContext} from "react-hook-form";
-import {PropsWithChildren} from "react";
-
-type RHFormType<FormType extends FieldValues> = {
-  onValid: SubmitHandler<FormType>
-  onInvalid: SubmitErrorHandler<FormType>
-}
-
-const RHForm = <FormType extends FieldValues>({ children, onValid, onInvalid }: PropsWithChildren<RHFormType<FormType>>) => {
-  const methods = useForm<FormType>()
-
-  return (
-      <FormProvider {...methods} >
-        <form onSubmit={methods.handleSubmit(onValid, onInvalid)}>{children}</form>
-      </FormProvider>
-  )
-}
-
-type RHInputType<FormType extends FieldValues> = {
-  name: FieldPath<FormType>
-}
-
-const RHInput = <FormType extends FieldValues>({ name }: RHInputType<FormType>) => {
-  const { register } = useFormContext<FormType>();
-
-  return <input {...register(name)} />
-}
-
-const SubmitButton = <FormType extends FieldValues>({ children }: PropsWithChildren<FormType>) => {
-  return <button type="submit">{children}</button>
-}
-
-const ResetButton = <FormType extends FieldValues>({ children }: PropsWithChildren<FormType>) => {
-  const { reset } = useFormContext<FormType>()
-
-  return <button type="reset" onClick={() => reset()}>{children}</button>
-}
+import {useForm} from "react-hook-form";
 
 type FormType = {
-  password?: string
+    password: string
 }
 
-const Form4 = () => {
-  const onValid = (data: FormType) => alert(data.password)
+const defaultValues =  () => fetch('/init').then<FormType>(res => res.json())
 
-  return (
-      <RHForm<FormType> onValid={onValid} onInvalid={alert}>
-        <RHInput<FormType> name="password" />
-        <SubmitButton>서브밋</SubmitButton>
-        <ResetButton<FormType>>리셋</ResetButton>
-      </RHForm>
-  )
+const Form4 = () => {
+    const methods = useForm<FormType>({
+        defaultValues
+    })
+    const onSubmit = (data: { password: string }) => alert(data.password)
+    return (
+        <form onSubmit={methods.handleSubmit(onSubmit)}>
+            <input {...methods.register('password')} />
+            <button type="submit">서브밋</button>
+            <button type="reset" onClick={() => methods.reset()}>리셋</button>
+        </form>
+    )
 }
 
 export default Form4

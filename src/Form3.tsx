@@ -1,9 +1,16 @@
 import {useForm} from "react-hook-form";
 
-const Form3 = () => {
-    const methods = useForm<{ password: string }>()
-    const onSubmit = (data: { password: string }) => alert(data.password)
+type FormType = {
+    password: string
+}
 
+const Form3 = () => {
+    const methods = useForm<FormType>({
+        defaultValues: {
+            password: ''
+        }
+    })
+    const onSubmit = (data: { password: string }) => alert(data.password)
     return (
         <form onSubmit={methods.handleSubmit(onSubmit)}>
             <input {...methods.register('password')} />
