@@ -4,11 +4,11 @@ type FormType = {
     password: string
 }
 
-const defaultValues =  () => fetch('/init').then<FormType>(res => res.json())
-
-const Form4 = () => {
+const Form5 = () => {
     const methods = useForm<FormType>({
-        defaultValues
+        defaultValues: {
+            password: ''
+        }
     })
     const onSubmit = (data: { password: string }) => alert(data.password)
     return (
@@ -20,4 +20,4 @@ const Form4 = () => {
     )
 }
 
-export default Form4
+export default Form5

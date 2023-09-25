@@ -15,7 +15,7 @@ const Form3 = () => {
         <form onSubmit={methods.handleSubmit(onSubmit)}>
             <input {...methods.register('password')} />
             <button type="submit">서브밋</button>
-            <button type="reset" onClick={() => methods.reset()}>리셋</button>
+            <button type="reset">리셋</button>
         </form>
     )
 }
