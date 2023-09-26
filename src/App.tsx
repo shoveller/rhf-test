@@ -15,6 +15,7 @@ function App() {
             <p><Link to="/form9">제어 컴포넌트 리셋하기</Link></p>
             <p><Link to="/form10">새로운 값으로 제어 컴포넌트 리셋하기</Link></p>
             <p><Link to="/form11">새로운 값으로 비제어 컴포넌트 리셋하기</Link></p>
+            <p><Link to="/form12">자체 기능으로 비제어 컴포넌트의 벨리데이션 처리하기</Link></p>
             <Outlet />
         </>
     )
