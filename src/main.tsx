@@ -12,6 +12,9 @@ import Form5 from "./Form5.tsx";
 import Form6 from "./Form6.tsx";
 import Form7 from "./Form7.tsx";
 import Form8 from "./Form8.tsx";
+import Form9 from "./Form9.tsx";
+import Form10 from "./Form10.tsx";
+import Form11 from "./Form11.tsx";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<App/>}>
@@ -23,6 +26,9 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="form6" element={<Form6/>}/>
         <Route path="form7" element={<Form7/>}/>
         <Route path="form8" element={<Form8/>}/>
+        <Route path="form9" element={<Form9/>}/>
+        <Route path="form10" element={<Form10/>}/>
+        <Route path="form11" element={<Form11/>}/>
     </Route>
 ))
 

@@ -12,6 +12,9 @@ function App() {
             <p><Link to="/form6">비 제어 컴포넌트 리셋하기</Link></p>
             <p><Link to="/form7">useContoller 로 제어 컴포넌트 통합하기</Link></p>
             <p><Link to="/form8">Contoller 로 제어 컴포넌트 통합하기</Link></p>
+            <p><Link to="/form9">제어 컴포넌트 리셋하기</Link></p>
+            <p><Link to="/form10">새로운 값으로 제어 컴포넌트 리셋하기</Link></p>
+            <p><Link to="/form11">새로운 값으로 비제어 컴포넌트 리셋하기</Link></p>
             <Outlet />
         </>
     )
