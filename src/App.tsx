@@ -2,16 +2,16 @@ import './App.css'
 import {Link, Outlet} from "react-router-dom";
 
 function App() {
-
     return (
         <>
-            <p><Link to="/form1">폼 사용법 1</Link></p>
-            <p><Link to="/form2">폼 사용법 2</Link></p>
-            <p><Link to="/form3">폼 사용법 3</Link></p>
-            <p><Link to="/form4">폼 사용법 4</Link></p>
-            <p><Link to="/form5">폼 사용법 5</Link></p>
-            <p><Link to="/form6">폼 사용법 6</Link></p>
-            <p><Link to="/initialValues">초깃값 설정</Link></p>
+            <p><Link to="/form1">제어 컴포넌트 이용하기</Link></p>
+            <p><Link to="/form2">비제어 컴포넌트 이용하기</Link></p>
+            <p><Link to="/form3">초깃값 설정하기</Link></p>
+            <p><Link to="/form4">비동기 초깃값 설정하기</Link></p>
+            <p><Link to="/form5">비 제어 컴포넌트 통합하기</Link></p>
+            <p><Link to="/form6">비 제어 컴포넌트 리셋하기</Link></p>
+            <p><Link to="/form7">useContoller 로 제어 컴포넌트 통합하기</Link></p>
+            <p><Link to="/form8">Contoller 로 제어 컴포넌트 통합하기</Link></p>
             <Outlet />
         </>
     )

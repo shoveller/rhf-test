@@ -37,6 +37,7 @@ const Form5 = () => {
                    pattern={pattern}
                    required={required}
                    disabled={disabled}
+                   defaultValue={methods.formState.defaultValues?.password}
             />
             <button type="submit">서브밋</button>
             <button type="reset">리셋</button>
