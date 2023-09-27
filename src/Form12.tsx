@@ -11,10 +11,10 @@ const Form12 = () => {
             password: ''
         }
     })
-    const onSubmit = (data: { password: string }) => alert(data.password)
+    const onValid = (data: { password: string }) => alert(data.password)
     console.log(methods.formState);
     return (
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onValid={methods.handleSubmit(onValid)}>
             <label>
                 <input {...methods.register('password', {
                     required: {

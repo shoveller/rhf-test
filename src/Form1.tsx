@@ -15,12 +15,12 @@ function Form1() {
             ref.current.value = ''
         }
     }
-    const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    const onValid: FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault()
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onValid={onValid}>
             <input name="password" ref={ref} onKeyUp={onKeyUp}/>
             <button onClick={handleSubmit}>서브밋</button>
             <button onClick={handleReset}>리셋</button>

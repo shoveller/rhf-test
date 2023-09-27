@@ -12,7 +12,7 @@ const Form11 = () => {
             password: '초기 password'
         }
     })
-    const onSubmit = (data: { password: string }) => alert(data.password)
+    const onValid = (data: { password: string }) => alert(data.password)
     const {
         field
     } = useController({
@@ -20,7 +20,7 @@ const Form11 = () => {
         name: 'password'
     })
     return (
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onValid={methods.handleSubmit(onValid)}>
             <input {...methods.register('id')}
                    defaultValue={methods.formState.defaultValues?.id}
             />

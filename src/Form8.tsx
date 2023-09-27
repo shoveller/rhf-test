@@ -10,9 +10,9 @@ const Form8 = () => {
             password: '초깃값'
         }
     })
-    const onSubmit = (data: { password: string }) => alert(data.password)
+    const onValid = (data: { password: string }) => alert(data.password)
     return (
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onValid={methods.handleSubmit(onValid)}>
             <Controller name="password"
                         control={methods.control}
                         render={({field}) => {

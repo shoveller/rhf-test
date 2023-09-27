@@ -10,7 +10,7 @@ const Form10 = () => {
             password: '초기 password'
         }
     })
-    const onSubmit = (data: { password: string }) => alert(data.password)
+    const onValid = (data: { password: string }) => alert(data.password)
     const {
         field
     } = useController({
@@ -18,7 +18,7 @@ const Form10 = () => {
         name: 'password'
     })
     return (
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onValid={methods.handleSubmit(onValid, on)}>
             <input onChange={field.onChange}
                    onBlur={field.onBlur}
                    disabled={field.disabled}

@@ -10,7 +10,7 @@ const Form5 = () => {
             password: '초깃값'
         }
     })
-    const onSubmit = (data: { password: string }) => alert(data.password);
+    const onValid = (data: { password: string }) => alert(data.password);
     const {
         onChange,
         onBlur,
@@ -25,7 +25,7 @@ const Form5 = () => {
         disabled,
     } = methods.register('password')
     return (
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onValid={methods.handleSubmit(onValid)}>
             <input onChange={onChange}
                    onBlur={onBlur}
                    ref={ref}
