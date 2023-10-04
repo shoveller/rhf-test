@@ -12,7 +12,7 @@ const Form8 = () => {
     })
     const onValid = (data: { password: string }) => alert(data.password)
     return (
-        <form onValid={methods.handleSubmit(onValid)}>
+        <form onSubmit={methods.handleSubmit(onValid)}>
             <Controller name="password"
                         control={methods.control}
                         render={({field}) => {

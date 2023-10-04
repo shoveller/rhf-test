@@ -18,7 +18,7 @@ const Form7 = () => {
         name: 'password'
     })
     return (
-        <form onValid={methods.handleSubmit(onValid)}>
+        <form onSubmit={methods.handleSubmit(onValid)}>
             <input onChange={field.onChange}
                    onBlur={field.onBlur}
                    disabled={field.disabled}

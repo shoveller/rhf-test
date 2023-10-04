@@ -20,7 +20,7 @@ function Form1() {
     }
 
     return (
-        <form onValid={onValid}>
+        <form onSubmit={onValid}>
             <input name="password" ref={ref} onKeyUp={onKeyUp}/>
             <button onClick={handleSubmit}>서브밋</button>
             <button onClick={handleReset}>리셋</button>

@@ -20,7 +20,7 @@ const Form11 = () => {
         name: 'password'
     })
     return (
-        <form onValid={methods.handleSubmit(onValid)}>
+        <form onSubmit={methods.handleSubmit(onValid)}>
             <input {...methods.register('id')}
                    defaultValue={methods.formState.defaultValues?.id}
             />

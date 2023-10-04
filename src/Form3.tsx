@@ -11,8 +11,9 @@ const Form3 = () => {
         }
     })
     const onValid = (data: { password: string }) => alert(data.password)
+
     return (
-        <form onValid={methods.handleSubmit(onValid)}>
+        <form onSubmit={methods.handleSubmit(onValid)}>
             <input {...methods.register('password')} />
             <button type="submit">서브밋</button>
             <button type="reset">리셋</button>

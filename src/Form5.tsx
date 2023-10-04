@@ -25,7 +25,7 @@ const Form5 = () => {
         disabled,
     } = methods.register('password')
     return (
-        <form onValid={methods.handleSubmit(onValid)}>
+        <form onSubmit={methods.handleSubmit(onValid)}>
             <input onChange={onChange}
                    onBlur={onBlur}
                    ref={ref}

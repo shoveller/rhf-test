@@ -9,7 +9,7 @@ const Form2 = () => {
   }
 
   return (
-    <form onValid={onValid}>
+    <form onSubmit={onValid}>
         <input name="password" />
         <button type="submit">서브밋</button>
         <button type="reset">리셋</button>
