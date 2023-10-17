@@ -4,6 +4,7 @@ import {Link, Outlet} from "react-router-dom";
 function App() {
     return (
         <>
+            <p><Link to="/rrd_jotai/en?s=1">jotai 의 onMount</Link></p>
             <p><Link to="/form1">제어 컴포넌트 이용하기</Link></p>
             <p><Link to="/form2">비제어 컴포넌트 이용하기</Link></p>
             <p><Link to="/form3">초깃값 설정하기</Link></p>

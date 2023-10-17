@@ -16,9 +16,11 @@ import Form9 from "./Form9.tsx";
 import Form10 from "./Form10.tsx";
 import Form11 from "./Form11.tsx";
 import Form12 from "./Form12.tsx";
+import Rrd_Jotai from "./Rrd_Jotai.tsx";
 
-const router = createBrowserRouter(createRoutesFromElements(
+export const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<App/>}>
+        <Route path="rrd_jotai/:locale" element={<Rrd_Jotai/>}/>
         <Route path="form1" element={<Form1/>}/>
         <Route path="form2" element={<Form2/>}/>
         <Route path="form3" element={<Form3/>}/>

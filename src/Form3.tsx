@@ -1,19 +1,10 @@
 import {useForm} from "react-hook-form";
 
-type FormType = {
-    password: string
-}
-
 const Form3 = () => {
-    const methods = useForm<FormType>({
-        defaultValues: {
-            password: ''
-        }
-    })
-    const onValid = (data: { password: string }) => alert(data.password)
+    const methods = useForm()
 
     return (
-        <form onSubmit={methods.handleSubmit(onValid)}>
+        <form onSubmit={methods.handleSubmit(data => alert(JSON.stringify(data)))}>
             <input {...methods.register('password')} />
             <button type="submit">서브밋</button>
             <button type="reset">리셋</button>
